@@ -7287,7 +7287,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "parachain-from-scratch-node"
+name = "parachain-template-node"
 version = "0.1.0"
 dependencies = [
  "clap",
@@ -7308,7 +7308,7 @@ dependencies = [
  "jsonrpsee",
  "log",
  "pallet-transaction-payment-rpc",
- "parachain-from-scratch-runtime",
+ "parachain-template-runtime",
  "parity-scale-codec",
  "polkadot-cli",
  "polkadot-primitives",
@@ -7346,7 +7346,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "parachain-from-scratch-runtime"
+name = "parachain-template-runtime"
 version = "0.1.0"
 dependencies = [
  "cumulus-pallet-aura-ext",

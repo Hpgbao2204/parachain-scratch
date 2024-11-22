@@ -1,5 +1,5 @@
 [package]
-name = "parachain-from-scratch-runtime"
+name = "parachain-template-runtime"
 version = "0.1.0"
 authors.workspace = true
 description = "Runtime template"
@@ -55,7 +55,12 @@ sp-std.workspace = true
 sp-transaction-pool.workspace = true
 sp-version.workspace = true
 
+# TODO: solochain dependencies
+# pallet-grandpa = { version = "36.0.0", default-features = false }
+# sp-consensus-grandpa = { version = "20.0.0", default-features = false }
+
 # Polkadot
+# TODO: Enable workspace dependencies
 pallet-xcm.workspace = true
 polkadot-parachain-primitives.workspace = true
 polkadot-runtime-common.workspace = true
@@ -64,6 +69,7 @@ xcm-builder.workspace = true
 xcm-executor.workspace = true
 
 # Cumulus
+# TODO: Enable workspace dependencies
 cumulus-pallet-aura-ext.workspace = true
 cumulus-pallet-parachain-system.workspace = true
 cumulus-pallet-session-benchmarking.workspace = true
@@ -81,6 +87,7 @@ parachain-info.workspace = true
 default = ["std"]
 std = [
     "codec/std",
+    # TODO: Enable features
     "cumulus-pallet-aura-ext/std",
     "cumulus-pallet-parachain-system/std",
     "cumulus-pallet-session-benchmarking/std",
@@ -102,6 +109,7 @@ std = [
     "pallet-aura/std",
     "pallet-authorship/std",
     "pallet-balances/std",
+    # TODO: Enable features
     "pallet-collator-selection/std",
     "pallet-message-queue/std",
     "pallet-session/std",
@@ -109,6 +117,7 @@ std = [
     "pallet-timestamp/std",
     "pallet-transaction-payment-rpc-runtime-api/std",
     "pallet-transaction-payment/std",
+    # TODO: Enable features
     "pallet-xcm/std",
     "parachain-info/std",
     "parachains-common/std",
@@ -127,13 +136,18 @@ std = [
     "sp-std/std",
     "sp-transaction-pool/std",
     "sp-version/std",
+    # TODO: Remove this feature when migrating the node
+    # "sp-consensus-grandpa/std",
+    # TODO: Remove this feature when migrating the node
+    # "pallet-grandpa/std",
+    # TODO: Enable features
     "xcm-builder/std",
     "xcm-executor/std",
     "xcm/std",
 ]
 
 runtime-benchmarks = [
-    
+    # TODO: Enable features
     "cumulus-pallet-parachain-system/runtime-benchmarks",
     "cumulus-pallet-session-benchmarking/runtime-benchmarks",
     "cumulus-pallet-xcmp-queue/runtime-benchmarks",
@@ -144,20 +158,24 @@ runtime-benchmarks = [
     "frame-system-benchmarking/runtime-benchmarks",
     "frame-system/runtime-benchmarks",
     "pallet-balances/runtime-benchmarks",
+    # TODO: Enable features
     "pallet-collator-selection/runtime-benchmarks",
     "pallet-message-queue/runtime-benchmarks",
     "pallet-sudo/runtime-benchmarks",
     "pallet-timestamp/runtime-benchmarks",
+    # TODO: Enable features
     "pallet-xcm/runtime-benchmarks",
     "parachains-common/runtime-benchmarks",
     "polkadot-parachain-primitives/runtime-benchmarks",
     "polkadot-runtime-common/runtime-benchmarks",
     "sp-runtime/runtime-benchmarks",
+    # TODO: Enable features
     "xcm-builder/runtime-benchmarks",
     "xcm-executor/runtime-benchmarks",
 ]
 
 try-runtime = [
+    # TODO: Enable features
     "cumulus-pallet-aura-ext/try-runtime",
     "cumulus-pallet-parachain-system/try-runtime",
     "cumulus-pallet-xcm/try-runtime",
@@ -169,12 +187,14 @@ try-runtime = [
     "pallet-aura/try-runtime",
     "pallet-authorship/try-runtime",
     "pallet-balances/try-runtime",
+    # TODO: Enable features
     "pallet-collator-selection/try-runtime",
     "pallet-message-queue/try-runtime",
     "pallet-session/try-runtime",
     "pallet-sudo/try-runtime",
     "pallet-timestamp/try-runtime",
     "pallet-transaction-payment/try-runtime",
+    # TODO: Enable features
     "pallet-xcm/try-runtime",
     "parachain-info/try-runtime",
     "polkadot-runtime-common/try-runtime",
