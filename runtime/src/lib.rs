@@ -64,6 +64,9 @@ pub use sp_runtime::BuildStorage;
 
 use weights::ExtrinsicBaseWeight;
 
+/// Import the zk-snarks pallet.
+pub use pallet_zk_snarks;
+
 /// Alias to 512-bit hash when used in the context of a transaction signature on the chain.
 pub type Signature = MultiSignature;
 
@@ -352,6 +355,8 @@ mod runtime {
     #[runtime::pallet_index(33)]
     pub type MessageQueue = pallet_message_queue::Pallet<Runtime>;
 
+    #[runtime::pallet_index(34)]
+    pub type ZkSnarks = pallet_zk_snarks::Pallet<Runtime>;
 
 }
 

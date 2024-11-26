@@ -388,3 +388,13 @@ impl pallet_collator_selection::Config for Runtime {
     type ValidatorRegistration = Session;
     type WeightInfo = (); // Configure based on benchmarking results.
 }
+
+
+/// Configure the pallet-template in pallets/zk-snarks.
+impl pallet_zk_snarks::Config for Runtime {
+	type RuntimeEvent = RuntimeEvent;
+    type MaxPublicInputsLength = ConstU32<4096>;
+    type MaxProofLength = ConstU32<4096>;
+    type MaxVerificationKeyLength = ConstU32<4096>;
+    type WeightInfo = ();
+}

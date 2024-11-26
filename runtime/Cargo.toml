@@ -83,6 +83,8 @@ pallet-collator-selection.workspace = true
 parachains-common.workspace = true
 parachain-info.workspace = true
 
+pallet-zk-snarks = { path = "../pallets/zk-snarks", default-features = false }
+
 [features]
 default = ["std"]
 std = [
@@ -118,6 +120,7 @@ std = [
     "pallet-transaction-payment-rpc-runtime-api/std",
     "pallet-transaction-payment/std",
     # TODO: Enable features
+    "pallet-zk-snarks/std",
     "pallet-xcm/std",
     "parachain-info/std",
     "parachains-common/std",
@@ -187,6 +190,7 @@ try-runtime = [
     "pallet-aura/try-runtime",
     "pallet-authorship/try-runtime",
     "pallet-balances/try-runtime",
+    "pallet-zk-snarks/try-runtime",
     # TODO: Enable features
     "pallet-collator-selection/try-runtime",
     "pallet-message-queue/try-runtime",
@@ -200,6 +204,7 @@ try-runtime = [
     "polkadot-runtime-common/try-runtime",
     "sp-runtime/try-runtime",
 ]
+
 
 # Enable the metadata hash generation.
 #

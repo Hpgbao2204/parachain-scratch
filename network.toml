@@ -1,4 +1,7 @@
 [relaychain]
+
+default_command = "../polkadot-sdk/target/release/polkadot"
+
 chain = "rococo-local"
 
 [[relaychain.nodes]]
@@ -11,7 +14,7 @@ validator = true
 
 [[parachains]]
 id = 2000
-default_command = "./target/release/parachain-from-scratch-node"
+default_command = "./target/release/parachain-template-node"
 
 [[parachains.collators]]
 name = "collator-01"
